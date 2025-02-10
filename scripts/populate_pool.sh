@@ -13,7 +13,7 @@ set -x
 files_per_dir=800               # max file creation loops (2 files/loop)
 max_random_count=200            # block count for random files
 random_blk_size=100K            # max block size for random
-user=hbarta
+user=scythe
 pool=send
 test_fs="test"
 

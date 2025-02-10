@@ -3,9 +3,9 @@
 start=$(/bin/date  +%Y-%m-%d-%H%M)
 start_s=$(/bin/date +%s)
 
-time -p syncoid --recursive --no-privilege-elevation send/test recv/test >"/home/hbarta/logs/$start.syncoid.txt" 2>&1
+/bin/time -p syncoid --recursive --no-privilege-elevation send/test recv/test >"/home/scythe/logs/$start.syncoid.txt" 2>&1
 
 finish_s=$(date +%s)
 elapsed=$((finish_s-start_s))
-zpool status send >>"/home/hbarta/logs/$start.syncoid.txt" 2>&1
-mv "/home/hbarta/logs/$start.syncoid.txt" "/home/hbarta/logs/$start.syncoid.$elapsed.txt"
+zpool status send >>"/home/scythe/logs/$start.syncoid.txt" 2>&1
+mv "/home/scythe/logs/$start.syncoid.txt" "/home/scythe/logs/$start.syncoid.$elapsed.txt"

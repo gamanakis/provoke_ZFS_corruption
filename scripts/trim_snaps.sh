@@ -38,5 +38,5 @@ done
 finish_s=$(/bin/date +%s)
 elapsed=$((finish_s-start_s))
 zpool status send 
-mv "/home/hbarta/logs/$start.trim_snaps.txt" \
-    "/home/hbarta/logs/$start.trim_snaps.$elapsed.txt"
+mv "/home/scythe/logs/$start.trim_snaps.txt" \
+    "/home/scythe/logs/$start.trim_snaps.$elapsed.txt"

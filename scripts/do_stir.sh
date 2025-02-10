@@ -3,10 +3,10 @@
 start=$(/bin/date  +%Y-%m-%d-%H%M)
 start_s=$(/bin/date +%s)
 
-/usr/bin/time -p /home/hbarta/bin/stir_pool.sh >"/home/hbarta/logs/$start.stir_pools.txt" 2>&1
+/bin/time -p stir_pool.sh >"/home/scythe/logs/$start.stir_pools.txt" 2>&1
 
 finish_s=$(/bin/date +%s)
 elapsed=$((finish_s-start_s))
-zpool status send >>"/home/hbarta/logs/$start.stir_pools.txt" 2>&1
-mv "/home/hbarta/logs/$start.stir_pools.txt" \
-    "/home/hbarta/logs/$start.stir_pools.$elapsed.txt"
+zpool status send >>"/home/scythe/logs/$start.stir_pools.txt" 2>&1
+mv "/home/scythe/logs/$start.stir_pools.txt" \
+    "/home/scythe/logs/$start.stir_pools.$elapsed.txt"
