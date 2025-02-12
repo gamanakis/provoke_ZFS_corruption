@@ -3,7 +3,7 @@
 start=$(/bin/date  +%Y-%m-%d-%H%M)
 start_s=$(/bin/date +%s)
 
-/bin/time -p syncoid --recursive --no-privilege-elevation send/test recv/test >"/home/scythe/logs/$start.syncoid.txt" 2>&1
+/bin/time -p syncoid --delete-target-snapshots --recursive --no-privilege-elevation send/test recv/test >"/home/scythe/logs/$start.syncoid.txt" 2>&1
 
 finish_s=$(date +%s)
 elapsed=$((finish_s-start_s))
