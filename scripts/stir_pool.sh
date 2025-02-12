@@ -10,7 +10,7 @@ set -x
 # see https://github.com/HankB/provoke_ZFS_corruption
 
 # tunables
-skip_range=20                   # skip 0-20 files and modify 
+skip_range=5                   # skip 0-20 files and modify 
 
 # Modify files. There are many ways to do this
 # but the first cut will just replace a random character in the file

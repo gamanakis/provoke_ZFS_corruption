@@ -5,8 +5,8 @@
 #
 
 
-retain_count=100
-# pool=send
+retain_count=500
+#pool=send
 
 start=$(/bin/date  +%Y-%m-%d-%H%M)
 start_s=$(/bin/date +%s)
