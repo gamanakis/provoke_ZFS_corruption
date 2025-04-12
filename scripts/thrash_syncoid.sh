@@ -15,12 +15,12 @@ do
     do_syncoid.sh
     
     # And check for corruption
-    for log in $(find /home/scythe/logs -type f|sort|tail)
+    for log in $(find -L /home/scythe/logs -type f|sort|tail)
     do
         if ( grep -q "use '-v' for a list" "$log" )
         then
             echo "corruption detected in $log"
-            date +%Y-%m-%d-%H%M >>/home/scythe/logs/halt_test.txt
+            date +%Y-%m-%d-%H%M%S >>/home/scythe/logs/halt_test.txt
             exit
         fi
     done

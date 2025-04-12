@@ -20,7 +20,7 @@ do
         if ( grep -q "use '-v' for a list" "$log" )
         then
             echo "corruption detected in $log"
-            date +%Y-%m-%d-%H%M >>/home/scythe/logs/halt_test.txt
+            date +%Y-%m-%d-%H%M%S >>/home/scythe/logs/halt_test.txt
             exit
         fi
     done

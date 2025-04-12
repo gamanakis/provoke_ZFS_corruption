@@ -2,7 +2,7 @@
 
 # Just to write the logs
 
-start=$(/bin/date  +%Y-%m-%d-%H%M)
+start=$(/bin/date  +%Y-%m-%d-%H%M%S)
 start_s=$(/bin/date +%s)
 
 /bin/time -p trim_snaps.sh >"/home/scythe/logs/$start.trim_snaps.txt" 2>&1

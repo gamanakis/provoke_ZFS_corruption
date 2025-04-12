@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # set -x
-start=$(/bin/date  +%Y-%m-%d-%H%M)
+start=$(/bin/date  +%Y-%m-%d-%H%M%S)
 start_s=$(/bin/date +%s)
 
 /bin/time -p syncoid --delete-target-snapshots --recursive --no-privilege-elevation send/test recv/test >"/home/scythe/logs/$start.syncoid.txt" 2>&1

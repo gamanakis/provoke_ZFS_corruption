@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-start=$(/bin/date  +%Y-%m-%d-%H%M)
+start=$(/bin/date  +%Y-%m-%d-%H%M%S)
 start_s=$(/bin/date +%s)
 
 /bin/time -p stir_pool.sh >"/home/scythe/logs/$start.stir_pools.txt" 2>&1
