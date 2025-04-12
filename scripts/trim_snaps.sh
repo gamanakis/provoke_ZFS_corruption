@@ -5,13 +5,14 @@
 #
 
 
-retain_count=500
-#pool=send
+retain_count=100
+pools=send
 
 start=$(/bin/date  +%Y-%m-%d-%H%M)
 start_s=$(/bin/date +%s)
 
 for pool in "send" "recv"
+#for pool in $pools
 do
     for fs in $(zfs list -r -H -o name "$pool")
     do  
